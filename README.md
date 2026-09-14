@@ -20,8 +20,8 @@ analysis and feature engineering, and ran the deep-learning experiments.
 
 - The 24-hour forecast has an RMSE of 92.17. The historical-average baseline has 113.42, so the error
   is 18.8% lower.
-- The generator plan covers 66.4% of predicted outage-hours. Placing the generators in the most
-  populous counties covers 51.7%.
+- The generator plan covers 66.4% of predicted outage-hours. Placing the generators in the five
+  most populous counties covers 51.7%.
 - I tuned loss functions for a 3-layer LSTM, with and without a GCN branch, for three days before I
   tried gradient boosting. `HistGradientBoostingRegressor` on the same features and split trained in
   four seconds and beat the best LSTM configuration by 37 RMSE points. Changing the loss did not move
@@ -128,7 +128,7 @@ Chinese (native) · English (fluent) · Japanese (JLPT N2)
 哪些县。我负责大部分建模、探索性分析、特征工程和深度学习实验。
 
 - 24 小时预测的 RMSE 为 92.17，历史均值基线为 113.42，误差低 18.8%。
-- 发电机方案覆盖 66.4% 的预测停电量；放在人口最多的几个县，覆盖 51.7%。
+- 发电机方案覆盖 66.4% 的预测停电量；放在人口最多的 5 个县，覆盖 51.7%。
 - 我先花三天调 3 层 LSTM（带或不带 GCN 分支）的损失函数，之后才试梯度提升。同样的特征和数据划分下，
   HistGradientBoostingRegressor 训练 4 秒，RMSE 比最好的 LSTM 配置低 37。换哪种损失函数，LSTM 在比率
   空间的验证 RMSE 都停在 0.0099 ± 0.002，瓶颈在特征和模型结构。现在我会先跑表格模型的基线。
